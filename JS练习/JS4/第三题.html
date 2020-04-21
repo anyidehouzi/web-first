@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function rev(a){
+				var b=0;
+				while(a){
+					b=b*10+a%10; //b=5 54 543  5432 54321
+					a=parseInt(a/10);//a=1234 123 12 1 0
+				}
+				return b;
+			}
+			alert(rev(98765));//54321  
+		</script>
+	</body>
+</html>

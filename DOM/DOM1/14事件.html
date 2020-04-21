@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<input type="text" name="" id="sr" value="123" />
+		<script type="text/javascript">
+			var oBox=document.getElementById("box");
+			oBox.onclick=function(){
+				alert("别点我，烦着呢~");
+			}
+			oBox.onmouseover=function(){
+				this.style.backgroundColor="red";
+			}
+			oBox.onmouseout=function(){
+				this.style.backgroundColor="yellow"
+			}
+			/*sr.onfocus=function(){
+				alert("我得到了焦点");
+			}*/
+			sr.onblur=function(){
+				var val=this.value;
+				if (val==''||val==undefined||val==null) {
+				  alert("输入框的值不能为空");
+				} else{
+					alert("输入正确");
+				}
+			}
+		</script>
+	</body>
+</html>

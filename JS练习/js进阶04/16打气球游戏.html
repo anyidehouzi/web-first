@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html >
+<head>
+		<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			height: 100%;
+		}
+		body{
+			height: 100%;
+			background: url(img/bg.jpg);
+			background-size: cover;
+			overflow: hidden;
+		}
+		.ballon{
+			width: 81px;
+			height: 119px;
+			background: url(img/ballon.png) no-repeat;
+			position: absolute;
+			cursor: crosshair;
+		}
+		h1{
+			color:white;
+			font-size: 60px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="fenshu">0</h1>
+	<h1 id="daojishi">50</h1>
+
+	<audio src="img/b.wav" id="yinyue"></audio>
+	<audio src="img/bgm.mp3" autoplay></audio>
+
+	<script type="text/javascript">
+		var ofenshu = document.getElementById("fenshu");
+		var odaojishi = document.getElementById("daojishi");
+		var yinyue = document.getElementById("yinyue");
+		var fenshu = 0;
+		var daojishi = 50;
+
+
+		function Ballon(){
+			this.top = 600;
+			this.left = Math.random() * 1200;
+			this.score = parseInt(Math.random() * 7) + 1;
+			this.init();
+			this.fly();
+		}
+		Ballon.prototype.init = function(){
+			this.dom = document.createElement("div");
+			this.dom.className = "ballon";
+			document.body.appendChild(this.dom);
+			this.dom.style.left = this.left + "px";
+			this.dom.style.top = this.top + "px";
+			var x = -(this.score - 1) % 4 * 96;
+			var y = -parseInt((this.score - 1) / 4) * 120;
+			this.dom.style.backgroundPosition = x + "px " + y + "px";
+
+			var self = this;
+			this.dom.onclick = function(){
+				self.bomb();
+				fenshu += self.score;
+				ofenshu.innerHTML = fenshu;
+				yinyue.load();
+				yinyue.play();
+			}
+		}
+		Ballon.prototype.fly = function(){
+			var self = this;
+			this.timer = setInterval(function(){
+				self.top -= 2 * self.score;
+				//小于-100
+				if(self.top < -100){
+					self.bomb();
+				}
+				self.dom.style.top = self.top + "px";
+			},20);
+		}
+		Ballon.prototype.bomb = function(){
+			clearInterval(this.timer);
+			document.body.removeChild(this.dom);
+		}
+
+		var frameCount = 0; 
+		var timer = setInterval(function(){
+			frameCount++;
+			if(frameCount % 2 == 0){
+				daojishi --;
+				odaojishi.innerHTML = daojishi;
+			}
+
+			if(daojishi == 0){
+				clearInterval(timer);
+				alert("GAME OVER 你的分数是" + fenshu);
+			}
+			new Ballon();
+		},500);
+	 
+ 
+	</script>
+</body>
+</html>

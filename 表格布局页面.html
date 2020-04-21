@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表格布局页面</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: o;
+		}
+		table tr td a{
+			text-decoration: none;
+			color: red;
+			margin: 0 17px;
+		}
+		table tr td a:hover{
+			color:aqua
+		}
+		.serve{
+			text-align: center;
+			font-size: 35px;
+			font-weight: bold;
+			color: #0343EF
+		}
+		.serve1{
+			text-align: center;
+			font-size: 12px;
+		}
+		.picture{
+			width: 225px;
+			height: 150px;
+		}
+		.logo{
+			text-align: center;
+		}
+		.logo1{
+			text-align: center;
+			font-size: 12px;
+		}
+	</style>
+</head>
+
+<body>
+	<table <!--border="1" cellspacing="0"-->>
+		<tr>
+			<td><img src="img/1.jpg" width="100" height="100px"></td>
+			<td colspan="3">
+				<a href="#">首页</a>
+				<a href="#">关于我们</a>
+				<a href="#">专利业务</a>
+				<a href="#">商标服务</a>
+				<a href="#">成功案例</a>
+				<a href="#">新闻动态</a>
+				<a href="#">联系我们</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4"><img src="img/2.jpg" width="900px" height="500px"></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<p class="serve">服务项目</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<p class="serve1">服务项目</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src="img/3.jpg" class="picture">
+				<p class="logo">国内商标</p>
+				<p class="logo1">国内商标注册，免费商标查询</p>
+			</td>
+			<td>
+				<img src="img/4.jpg" class="picture">
+				<p class="logo">国际商标</p>
+				<p class="logo1">美国，加拿大，欧盟商标注册</p>
+			</td>
+			<td>
+				<img src="img/5.jpg" class="picture">
+				<p class="logo">专利服务</p>
+				<p class="logo1">申请专利，专利办理</p>
+			</td>
+			<td>
+				<img src="img/6.jpg" class="picture">
+				<p class="logo">版权服务</p>
+				<p class="logo1">作者版权登记，著作者登记</p>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

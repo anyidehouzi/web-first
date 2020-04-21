@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function outer(){
+				var aa=0;
+				function inner(){
+					aa++;
+					console.log(aa);
+				}
+				return inner;
+			}
+			var inn1=outer();
+			var inn2=outer();
+			inn1()//1
+			inn1()//2
+			inn1()//3
+			inn1()//4
+			inn2()//1
+			inn2()
+			inn2()
+			inn2()
+			inn2()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="2020LOGO图片"/>
+		<meta name="description" content="LOGO园知名的logo设计欣赏网站,其中的2020标志归档包含2020标志logo图片、2020标志logo设计、2020标志logo素材"/>
+		<title>表单控件分类</title>
+		<style type="text/css">
+			body{
+				background-color: cadetblue;
+			}
+			textarea{
+				resize: none;
+			}
+			#sj{
+				outline: none;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="file://///192.168.31.227/web39/前端案例/HTML/html01/test.html" method="get">
+			<fieldset id="">
+				<legend align="center">输入型控件</legend>
+<!--				required:文本必须输入  maxlength：最大长度    minlenght:最小长度-->
+				<p>
+					日期时间： <input type="datetime" name="sj" id="sj" required value="" placeholder="请输入自定义时间" size="20" maxlength="5"/>
+				</p>
+				<p>
+					邮箱：<input type="email" name="yx" />
+				</p>
+				<p>
+				  数字：	<input type="number" name="sz" id="" value="" min="10" max="30"/>
+				</p>
+				<p>
+<!--					readonly：只读-->
+					密码： <input type="password" name="pass" id="pass" value="111" readonly/>
+				</p>
+				<p>
+<!--					disabled：不可选-->
+					搜索：	<input type="search" name="sousuo" id="sousuo" value="123" disabled/>
+				</p>
+				<p>
+					电话：<input type="tel" name="phone" id="phone" value="" />
+				</p>
+				<p>
+					文本：<input type="text" name="wb" id="wb" value="" />
+				</p>
+				<p>
+					网址：<input type="url" name="wz" id="" value="" />
+				</p>
+				<p>
+					文本域：
+					<textarea name="desc" rows="10" cols="30"></textarea>
+				</p>
+			</fieldset>
+			<fieldset id="">
+				<legend align="center">选择型控件</legend>
+				<p>
+					爱好：
+					<input type="checkbox" name="hobby" id="" value="吃饭" />吃饭
+					<input type="checkbox" name="hobby" id="" value="睡觉" />睡觉
+					<input type="checkbox" name="hobby" id="doudou" value="打豆豆" /><label for="doudou">打豆豆</label> 
+				</p>
+				<p>
+					时间：<input type="date" name="" id="" value="" />
+					<input type="datetime-local" name="" id="" value="" />
+					<input type="month" name="" id="" value="" />
+					<input type="time" name="" id="" value="" />
+					<input type="week" name="" id="" value="" />
+				</p>
+				<p>
+					性别：<input type="radio" name="sex" id="" value="男" />男
+					<input type="radio" name="sex" id="" value="女" />女
+				</p>
+				<p>
+					范围：<input type="range" name="" id="" value="20" min="10" max="50"/>
+				</p>
+				<p>
+					颜色：<input type="color" name="" id="" value="" />
+				</p>
+				<p>
+					下拉选择：
+					<select name="">
+						<option value="山西省">山西省</option>
+						<option value="陕西省" label="陕西省">山西省</option>
+						<option value="河南省">河南省</option>
+						<option value="河北省">河北省</option>
+					</select>
+				</p>
+			</fieldset>
+			<fieldset id="">
+				<legend align="center">事件性控件</legend>
+				<input type="button" name="" id="" value="按钮" />
+				
+				<input type="file" name="" id="" value="" />
+				<input type="image" name="" id="" value="" src="img/file://///192.168.31.227/web39/前端案例/HTML/html01/img/cat.jpg" width="100" height="100"/>
+				<input type="reset" name="" id="" value="重置按钮" />
+				<input type="submit"  value="提交"/>
+				<button>按钮123</button>
+			</fieldset>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var inner;
+			function outer(){
+				var a=123;
+				var b=456;
+				inner=function(){
+					alert(a);
+					alert(b);
+				}
+			}
+			outer()
+			var a=111;
+			var b=222;
+			inner()
+		</script>
+	</body>
+</html>

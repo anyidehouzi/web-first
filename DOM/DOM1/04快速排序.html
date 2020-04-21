@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=[22,55,32,67,11,45,61,21];
+			console.log(arr);
+			function quicksort(start,end){
+				if (start>=end) {
+					return;
+				}
+				var pivot=arr[start];
+				var left=start;
+				var right=end;
+				while(left!=right){
+					while(arr[right]>=pivot&&right>left){
+						right--;
+					}
+					while(arr[left]<=pivot&&left<right){
+						left++;
+					}
+					if(left<right){
+						var temp=arr[right];
+						arr[right]=arr[left]
+						arr[left]=temp;
+					}
+				}
+				arr[start]=arr[left];
+				arr[left]=pivot;
+				quicksort(start,left-1);
+				quicksort(right+1,end);
+			}
+			quicksort(0,arr.length-1);
+			console.log(arr);
+		</script>
+	</body>
+</html>

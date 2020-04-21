@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+/*			function outer(){
+				var a=11;
+				function inner(){
+					console.log(a);
+				}
+			}
+			inner();//报错*/
+			function outer(){
+				var a=11;
+				function inner(){
+					console.log(a);
+				}
+				return inner;
+			}
+			var inn=outer();
+			inn();//11 
+		</script>
+	</body>
+</html>

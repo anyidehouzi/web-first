@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>茶</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 100%;
+		}
+		.top{
+			width: 100%;
+			height: 70px;
+			background-color: #6D8555;
+/*			opacity: 0.5; 透明度  0.5=50%*/
+			margin: auto;
+		}
+		.top-nav-1{
+			width: 1200px;
+			height: 70px;
+/*			background-color: antiquewhite;*/
+			margin: auto;
+		}
+		.top-nav-1 img:nth-child(1){
+			float: left;
+			margin-top: 14px;
+		}
+		.top-nav-1 img:nth-child(2){
+			float: left;
+			margin-top: 30px;
+			margin-left: 8px;
+		}
+		.top-nav-2{
+			list-style: none;
+			display: flex;
+			flex-direction: row-reverse;
+			color: white;
+/*			font-size: 18px;*/
+			line-height: 70px;
+		}
+		.top-nav-2 li{
+			margin: 0 20px;
+			cursor: pointer;
+		}
+		.banner{
+			width: 1280px;
+			margin: 0 auto;
+			cursor: pointer;
+		}
+		.content{
+			width: 1200px;
+			margin: auto;
+		}
+		.content-list{
+			text-align: center;
+			list-style: none;
+		}
+		.content-list li:nth-child(1){
+			font-size: 26px;
+			margin-top: 30px;
+			cursor: pointer;
+		}
+		.content-list li:nth-child(2){
+			font-size: 12px;
+			color: #909090;
+			cursor: pointer;
+		}
+		.content-1{
+			width: 1200px;
+			height: 292px;
+			border-bottom: 1px solid #A4A4A4;
+		}
+		.content-1 img{
+			margin-top: 36px;
+			float: left;
+			cursor: pointer;
+		}
+		.content-1-1{
+/*			border: 1px solid black;*/
+			width: 480px;
+			height: 292px;
+			float: left;
+			margin-left: 40px;
+		}
+		.content-1-1 p:nth-child(1){
+			margin-top: 30px;
+			cursor: pointer;
+		}
+		.content-1-1 p:nth-child(2){
+			font-size: 12px;
+			margin-top: 70px;
+		}
+		.content-1-1 p:nth-child(3){
+			font-size: 12px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space:nowrap;
+			margin-top: 5px;
+		}
+		.content-1-1 p:nth-child(4){
+			font-size: 20px;
+			margin-top: 70px;
+		}
+		.content-1-2{
+			width: 140px;
+			height: 50px;
+			border-left: 1px solid #909090;
+			float: right;
+			margin-top: 116px;
+		}
+		.content-1-2 p{
+			line-height: 50px;
+			font-size: 20px;
+			color: #909090;
+			float: right;
+			cursor: pointer;
+		}
+		.list{
+/*			width: 1200px;*/
+			height: 100px;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			line-height: 100px;
+			font-size: 20px;
+		}
+		.list li{
+			margin: 0 10px;
+			cursor: pointer;
+		}
+		.list li:nth-child(1){
+			color: #6D8555;
+		}
+		.list li:last-child{
+			width: 80px;
+			height: 40px;
+			line-height: 40px;
+			margin-top: 30px;
+			text-align: center;
+			background-color: #6D8555; 
+			border-radius: 6px;
+		}
+		.bottom{
+			width: 1280px;
+/*			border: 1px solid black;*/
+			margin: 20px auto;
+			overflow: hidden;
+			background-image: url("CONTACT.png");
+			background-repeat: no-repeat;
+			background-position: 420px 280px;
+            background-size: 800px 130px;
+		}
+		.bottom img{
+			width: 1280px;
+			margin: 0 auto;
+			float: left;
+			cursor: pointer;
+		}
+		.bottom-lift{
+			float: left;
+			margin-left: 50px;
+			margin-top: 30px;
+		}
+		.bottom-lift ul{
+			list-style: none;
+			font-size: 12px;
+			margin: 5px 0;
+		}
+		.bottom-lift ul li:nth-child(2){
+			font-size: 12px;
+			color: #909090;
+			margin-bottom: 20px;
+		}
+		.bottom-right{
+			font-size: 14px;
+			float: right;
+			margin-top: 30px;
+			margin-right: 50px;
+		}
+		.bottom-right p{
+			cursor: pointer;
+		}
+		.bottom-right p:nth-child(1){
+			float: right;
+		}
+		.bottom-right p input{
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #909090;
+			margin-left: 5px;
+			background-color: transparent;
+		}
+		.bottom-right p:nth-child(2){
+			float: right;
+		}
+		.bottom-right p:nth-child(3){
+			float: right;
+		}
+		.bottom-right p:nth-child(4) input{
+			width: 587px;
+			height: 60px;
+		}
+		.bottom-right p:nth-child(5){
+			font-size: 20px; 
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: #6D8555;
+			border-radius: 5px;
+			margin: 20px auto;
+		}
+		.bottom-letter{
+			font-size: 140px;
+			color: #909090;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="top">
+			<div class="top-nav-1">
+				<img src="img/logo-1.png">
+				<img src="img/logo-2.png">
+				<ul class="top-nav-2">
+					<li>联系我们</li>
+					<li>服务项</li>
+					<li>茶叶</li>
+					<li style="color: #E39654">新闻资讯</li>
+					<li>关于我们</li>
+					<li>首 页</li>
+				</ul>
+			</div>
+			<div class="banner">
+				<img src="img/banner-top.png">
+			</div>
+			<div class="content">
+				<ul class="content-list">
+					<li>--- 新闻资讯 ---</li>
+					<li>NEWS CENTER</li>
+				</ul>
+				<div class="content-1">
+					<img src="img/content-1.png">
+					<div class="content-1-1">
+						<p>中国有一种用鱼做成的茶，只有贵族才能享用。</p>
+						<p>很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳</p>
+						<p>虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成</p>
+						<p>12-21/2018</p>
+					</div>
+					<div class="content-1-2">
+						<p>MORE&nbsp;&nbsp;＞</p>
+					</div>
+				</div>
+				<div class="content-1">
+					<img src="img/content-2.png">
+					<div class="content-1-1">
+						<p>中国有一种用鱼做成的茶，只有贵族才能享用。</p>
+						<p>很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳</p>
+						<p>虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成</p>
+						<p>12-21/2018</p>
+					</div>
+					<div class="content-1-2">
+						<p>MORE&nbsp;&nbsp;＞</p>
+					</div>
+				</div>
+				<div class="content-1">
+					<img src="img/content-3.png">
+					<div class="content-1-1">
+						<p>中国有一种用鱼做成的茶，只有贵族才能享用。</p>
+						<p>很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳</p>
+						<p>虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成</p>
+						<p>12-21/2018</p>
+					</div>
+					<div class="content-1-2">
+						<p>MORE&nbsp;&nbsp;＞</p>
+					</div>
+				</div>
+				<div class="content-1">
+					<img src="img/content-4.png">
+					<div class="content-1-1">
+						<p>中国有一种用鱼做成的茶，只有贵族才能享用。</p>
+						<p>很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳</p>
+						<p>虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成</p>
+						<p>12-21/2018</p>
+					</div>
+					<div class="content-1-2">
+						<p>MORE&nbsp;&nbsp;＞</p>
+					</div>
+				</div>
+				<div class="content-1">
+					<img src="img/content-5.png">
+					<div class="content-1-1">
+						<p>中国有一种用鱼做成的茶，只有贵族才能享用。</p>
+						<p>很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳</p>
+						<p>虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成很多人只知道保护心脑血管要喝绿茶，却不知道绿茶性寒，而很多中老年朋友多少都有些阳虚，所以如果在长久喝绿茶又不注意补阳的话，很容易顾此失彼，对身体健康造成</p>
+						<p>12-21/2018</p>
+					</div>
+					<div class="content-1-2">
+						<p>MORE&nbsp;&nbsp;＞</p>
+					</div>
+				</div>
+				<ul class="list">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>...</li>
+					<li>12</li>
+					<li>下一页</li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<img src="img/banner-bottom.png">
+				<div class="bottom-lift">
+					<ul>
+						<li>西安茶叶销售推广设计有限公司</li>
+						<li>XiAn  tea Sales&Extension Design Co.,Ltd </li>
+						<li>总部地址：陕西省西安市长安区193号</li>
+						<li>总部电话：029-3278413</li>
+						<li>电子邮箱：web@324.com</li>
+						<li>邮政编码：021332</li>
+					</ul>
+				</div>
+				<div class="bottom-right">
+					<p>E-mail<input type="text"/></p>
+					<p>电话<input type="text"/></p>
+					<p>姓名<input type="text"/></p>
+					<p>内容<input type="text"/></p>
+					<p>SUBMIAT</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

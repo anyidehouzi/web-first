@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 1000px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 100px auto;
+		}
+		.box ul{
+			list-style: none;
+		}
+		li .turn{
+			width: 200px;
+			height: 200px;
+			float: left;
+			position: relative;
+		}
+		.turn img.turn-1{
+			position: absolute;
+			top: 46.5px;
+			left: 46.5px;
+			z-index: 2;
+			transition: all 1s;
+			cursor: pointer;
+			
+		}
+		.turn img.turn-2{
+			position: absolute;
+			top: 46.5px;
+			left: 46.5px;
+			transition: all 1s;
+			opacity: 0;
+			cursor: pointer;
+		}
+		.turn img.turn-3-1{
+			position: absolute;
+			top: 65px;
+			left: 77px;
+			z-index: 2;
+			cursor: pointer;
+		}
+		.turn img.turn-3-2{
+			position: absolute;
+			top: 65px;
+			left: 81px;
+			z-index: 2;
+			cursor: pointer;
+		}
+		.turn img.turn-3-3{
+			position: absolute;
+			top: 65px;
+			left: 83px;
+			z-index: 2;
+			cursor: pointer;
+		}
+		.turn img.turn-3-4{
+			position: absolute;
+			top: 65px;
+			left: 83px;
+			z-index: 2;
+			cursor: pointer;
+		}
+		.turn img.turn-3-5{
+			position: absolute;
+			top: 70px;
+			left: 79px;
+			z-index: 2;
+			cursor: pointer;
+		}
+		.turn .turn-4{
+			position: absolute;
+			top: 116px;
+			left: 73px;
+			z-index: 2;
+			font-size: 14px;
+			color: white;
+			cursor: pointer;
+		}
+		.turn:hover img.turn-2{
+			transform: rotate(360deg);
+			opacity: 1;
+		}
+		.turn:hover img.turn-1{
+			transform: rotate(360deg);
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<div class="turn">
+					<img src="../imgs/a_1.png" class="turn-1">
+					<img src="../imgs/a_1_h1.png" class="turn-2">
+					<img src="../imgs/tb_1.png" class="turn-3-1">
+					<p class="turn-4">我要陪练</p>
+				</div>
+			</li>
+			<li>
+				<div class="turn">
+					<img src="../imgs/a_2.png" class="turn-1">
+					<img src="../imgs/a_2_h1.png" class="turn-2">
+					<img src="../imgs/tb_2.png" class="turn-3-2">
+					<p class="turn-4">班型介绍</p>
+				</div>
+			</li>
+			<li>
+				<div class="turn">
+					<img src="../imgs/a_3.png" class="turn-1">
+					<img src="../imgs/a_3_h1.png" class="turn-2">
+					<img src="../imgs/tb_3.png" class="turn-3-3">
+					<p class="turn-4">班车服务</p>
+				</div>
+			</li>
+			<li>
+				<div class="turn">
+					<img src="../imgs/a_4.png" class="turn-1">
+					<img src="../imgs/a_4_h1.png" class="turn-2">
+					<img src="../imgs/tb_4.png" class="turn-3-4">
+					<p class="turn-4">在线法培</p>
+				</div>
+			</li>
+			<li>
+				<div class="turn">
+					<img src="../imgs/a_5.png" class="turn-1">
+					<img src="../imgs/a_5_h1.png" class="turn-2">
+					<img src="../imgs/tb_5.png" class="turn-3-5">
+					<p class="turn-4">网上约车</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>动态练习</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 1000px;
+			height: 50px;
+			border: 1px solid black;
+			margin: 100px auto;
+		}
+		.box ul{
+			height: 50px;
+			width: 1000px;
+			line-height: 50px;
+			text-align: center;
+		}
+		.box ul li{
+			list-style: none;
+			width: 100px;
+			height: 50px;
+			float: left;
+			position: relative;
+			transform-style: preserve-3d;
+			transition: all 0.5s;
+		}
+		.box ul li:hover{
+			transform: rotateX(90deg);
+		}
+		.box ul li span{
+			display: block;
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+		}
+		.box ul li span:nth-child(1){
+			background-color: red;
+			z-index: 1;
+			transform: translateZ(25px);
+		}
+		.box ul li span:nth-child(2){
+			background-color: blue;
+			transform: rotateX(-90deg) translateZ(25px);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<span>导航一</span>
+				<span>one</span>
+			</li>
+			<li>
+				<span>导航二</span>
+				<span>two</span>
+			</li>
+			<li>
+				<span>导航三</span>
+				<span>three</span>
+			</li>
+			<li>
+				<span>导航四</span>
+				<span>four</span>
+			</li>
+			<li>
+				<span>导航五</span>
+				<span>five</span>
+			</li>
+			<li>
+				<span>导航六</span>
+				<span>six</span>
+			</li>
+			<li>
+				<span>导航七</span>
+				<span>seven</span>
+			</li>
+			<li>
+				<span>导航八</span>
+				<span>eight</span>
+			</li>
+			<li>
+				<span>导航九</span>
+				<span>nine</span>
+			</li>
+			<li>
+				<span>导航十</span>
+				<span>ten</span>
+			</li>
+			
+		</ul>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var dilei=parseInt(Math.random()*100)+1;
+			var xiaxian=1;
+			var shangxian=100;
+			while(true){
+				var a=parseInt(prompt("请输入数字，范围是"+xiaxian+"到"+shangxian));
+				if (a>xiaxian&&a<shangxian) {
+					if (a>dilei) {
+						shangxian=a;
+					}else if(a<dilei){
+						xiaxian=a;
+					}else{
+						alert("恭喜你中奖了！！！");
+						break;
+					}
+				}else{
+					alert("请输入正确的数字。");
+				}
+			}
+		</script>
+	</body>
+</html>
